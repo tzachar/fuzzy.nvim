@@ -11,7 +11,7 @@ M.filter = function(_, pattern, lines)
 	for _, line in ipairs(lines) do
 		local score = fzf.get_score(line, pattern_obj, slab)
 		local positions = fzf.get_pos(line, pattern_obj, slab)
-		if #positions > 0 then
+		if (positions and #positions > 0) then
 			table.insert(ans, {line, positions, score})
 		end
 	end
