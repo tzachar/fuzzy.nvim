@@ -3,9 +3,9 @@ local fzy = require('fzy-lua-native')
 local M = {}
 
 -- return a list of {line, positions, score}
-M.filter = function(_, pattern, lines)
+M.filter = function(_, pattern, lines, is_case_sensitive)
 	local ans = {}
-	local matches = fzy.filter(pattern, lines, true)
+	local matches = fzy.filter(pattern, lines, is_case_sensitive)
 
 	for _, result in ipairs(matches) do
 		local line, positions, score = unpack(result)

@@ -3,10 +3,10 @@ local fzf = require('fzf_lib')
 local M = {}
 
 -- return a list of {line, positions, score}
-M.filter = function(_, pattern, lines)
+M.filter = function(_, pattern, lines, case_mode)
 	local ans = {}
 	local slab = fzf.allocate_slab()
-	local pattern_obj = fzf.parse_pattern(pattern, 0, true)
+	local pattern_obj = fzf.parse_pattern(pattern, case_mode, true)
 
 	for _, line in ipairs(lines) do
 		local score = fzf.get_score(line, pattern_obj, slab)

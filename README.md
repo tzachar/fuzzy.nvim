@@ -24,8 +24,11 @@ use {'tzachar/fuzzy.nvim', requires = {'romgrk/fzy-lua-native'}}
 # Api
 
 This plugin supports a module with a single method: `filter`.
-The `filter` method receives two parameters: a pattern to match and a list of
-strings. 
+The `filter` method receives three parameters: a pattern to match, a list of
+strings and an extra parameter passed to the fuzzy library: for fzy, its a
+boolean indicating `is_case_sensitive`, for fzf its the `case_mode` (see
+[this](https://github.com/nvim-telescope/telescope-fzf-native.nvim#lua-interface)). 
+
 The method returns a list of `{string, match_positions, score}`. For the
 meanings of match_positions and score see individual documentations of `fzf` and
 `fzy`.
