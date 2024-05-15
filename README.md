@@ -5,9 +5,9 @@ An abstraction layer on top of fzf and fzy.
 # Installation
 
 Depends on [telescope-fzf-native.nvim](https://github.com/nvim-telescope/telescope-fzf-native.nvim) or 
-[fzy-lua-native](https://github.com/romgrk/fzy-lua-native).
+[fzy-lua-native](https://github.com/romgrk/fzy-lua-native) or [telescope-zf-native.nvim](https://github.com/natecraddock/telescope-zf-native.nvim).
 
-If both `fzf` and `fzy` are installed, will prefer `fzf`.
+Priority: fzf > fzy > zf
 
 Using [Packer](https://github.com/wbthomason/packer.nvim/) with `fzf`:
 ```lua
@@ -19,6 +19,12 @@ Using [Packer](https://github.com/wbthomason/packer.nvim/) with `fzy`:
 ```lua
 use {'romgrk/fzy-lua-native', run = 'make'}
 use {'tzachar/fuzzy.nvim', requires = {'romgrk/fzy-lua-native'}}
+```
+
+Using [Packer](https://github.com/wbthomason/packer.nvim/) with `zf`:
+```lua
+use {'natecraddock/telescope-zf-native.nvim'}
+use {'tzachar/fuzzy.nvim', requires = {'natecraddock/telescope-zf-native.nvim'}}
 ```
 
 # Api
