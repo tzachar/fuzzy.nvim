@@ -23,7 +23,6 @@ use {'tzachar/fuzzy.nvim', requires = {'romgrk/fzy-lua-native'}}
 
 Using [Packer](https://github.com/wbthomason/packer.nvim/) with `zf`:
 ```lua
-use {'natecraddock/telescope-zf-native.nvim'}
 use {'tzachar/fuzzy.nvim', requires = {'natecraddock/telescope-zf-native.nvim'}}
 ```
 
