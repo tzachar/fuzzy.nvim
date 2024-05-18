@@ -1,4 +1,5 @@
 local zf = require('zf')
+zf.load_zf()
 
 local M = {}
 
